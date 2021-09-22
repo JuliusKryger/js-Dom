@@ -4,22 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
     <title>Document</title>
-
 <style>
-
 div {width: 25px; height: 25px;background-color:yellow; margin:1px;}
-
 </style>
-
 </head>
 <body>
-
     <div id="1"> <button type="button" onclick="idOfTheDiv1()">Div1</button> </div>
     <div id="2"> <button type="button" onclick="idOfTheDiv2()">Div2</button> </div>
-
-<div id="outer">
+<div id="outer" onclick = "outerCall()">
     <div id="3">3</div>
     <div id="4">4</div>
     <div id="5">5</div>
@@ -32,16 +25,6 @@ div {width: 25px; height: 25px;background-color:yellow; margin:1px;}
     <div id="12">12</div>
     <p id="outputtext"></p>
 </div>   
-
-    <script type="application/javascript">
-    
-    let outerDiv = document.getElementById("outer")
-    outerDiv.addEventListener('click', event => {
-        event.preventDefault();
-        document.getElementById("outputtext").innerHTML = event.target.getAttribute('id')
-        console.log(event.target.getAttribute('id'))
-    })
-    
-    </script>
+    <script type="application/javascript" src="dom.js"></script>
 </body>
 </html>
