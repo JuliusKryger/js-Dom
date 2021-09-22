@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="application/javascript" src="dom.js"></script>
+    <title>DOM opgave</title>
+
+    <style>
+    div {
+        border: 1px solid red;
+        margin: 5px;
+        background-color: yellow;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <h1> Dom Opagve hej </h1>
+
+        <button type="button" onclick="colorButton()">Change Color!</button> 
+
+    <div id="1"> test1 </div>
+    <div id="2"> test2 </div>
+    <div id="3"> test3 </div>
+
+    <script type="application/javascript">
+        let divs = document.getElementsByTagName("div")
+        for (let i = 0 ; i < divs.length ; i++) {
+            divs[i].innerHTML = i;
+            divs[i].style.backgroundColor = "lightblue";
+        }
+
+    </script>
+
+
+    
+</body>
+
+</html>
